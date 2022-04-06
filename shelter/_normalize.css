@@ -5,15 +5,24 @@ html {
 
 body {
   margin: 0;
+  font-weight: 400;
 }
 
 main {
   display: block;
 }
 
+footer, section, header {
+  margin: 0 auto
+}
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0
 }
 
 hr {
@@ -29,6 +38,7 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 abbr[title] {
@@ -74,6 +84,8 @@ button, input, optgroup, select, textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  white-space: nowrap;
+  text-align: center;
 }
 
 button, input {
