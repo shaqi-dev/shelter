@@ -285,15 +285,25 @@ h3
 .help__list
     max-width: 1026px
     margin: 60px auto 0 auto
-    display: flex
-    justify-content: space-evenly
-    flex-wrap: wrap
     padding: 0
-    row-gap: 55px
+    display: flex
+    flex-direction: column
+    gap: 55px
+    
+
+.help__list_row-1
+    display: grid
+    justify-content: space-between
+    grid-template-columns: 83px 152px 60px 154px 102px
+
+.help__list_row-2
+    display: grid
+    justify-content: space-evenly
+    grid-template-columns: 145px 165px 230px 200px
 
 .help-item
-    display: inline-block
-    flex-basis: 20%
+    display: block
+    z-index: -10
     text-align: center
     list-style: none
 
