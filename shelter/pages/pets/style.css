@@ -1,0 +1,94 @@
+@import url("http://fonts.cdnfonts.com/css/georgia");
+@import url("http://fonts.cdnfonts.com/css/arial");
+@import '../../_normalize.css';
+.inner-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+
+.header {
+  position: sticky;
+  background-color: #FFFFFF;
+  height: 120px;
+  margin: 0 auto;
+  top: 0px;
+  z-index: 10;
+}
+
+.header__content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo__title {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.logo__title span {
+  letter-spacing: 0.003em;
+}
+
+.logo__subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: #292929;
+  margin-top: 10px;
+  margin-left: 4px;
+}
+
+.header-nav__list {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.header-nav__item a {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 160%;
+  color: #545454;
+  cursor: pointer;
+}
+.header-nav__item a:hover {
+  color: #292929;
+}
+
+.header-nav__item_active a {
+  color: #292929;
+  line-height: 160%;
+}
+.header-nav__item_active a::after {
+  content: "";
+  display: block;
+  bottom: 3px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #F1CDB3;
+}
+
+/*# sourceMappingURL=style.css.map */
