@@ -253,6 +253,10 @@ h3 {
 .pet-card:hover {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
+.pet-card:hover .button-secondary {
+  border-color: #FDDCC4;
+  background-color: #FDDCC4;
+}
 
 .pet-card__image {
   width: 270px;
@@ -451,7 +455,7 @@ h4 {
   color: #FFFFFF;
 }
 
-.footer-info-item {
+.footer-info-item a {
   display: flex;
   gap: 20px;
   align-items: center;

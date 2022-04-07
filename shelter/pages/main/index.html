@@ -22,9 +22,9 @@
 						<li class="header-nav__item header-nav__item_active">
 							<a href="">About the shelter</a>
 						</li>
-						<li class="header-nav__item"><a href="">Our pets</a></li>
-						<li class="header-nav__item"><a href="">Help the shelter</a></li>
-						<li class="header-nav__item"><a href="">Contacts</a></li>
+						<li class="header-nav__item"><a href="../pets/">Our pets</a></li>
+						<li class="header-nav__item"><a href="#help">Help the shelter</a></li>
+						<li class="header-nav__item"><a href="#footer">Contacts</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -38,7 +38,7 @@
 						extremely wide and open heart. He or she will love you more than
 						anybody else in the world, you will see!
 					</p>
-					<button type="submit" class="button-primary start-screen__button">
+					<button onclick="location.href='#our-friends'" type="button" class="button-primary start-screen__button">
 						Make a friend
 					</button>
 				</div>
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="our-friends">
+		<section id="our-friends" class="our-friends">
 			<div class="our-friends__content inner-wrapper">
 				<h3 class="our-friends__heading">
 					Our friends who are&nbsplooking for a house
@@ -91,7 +91,7 @@
 								alt="pet image"
 							/>
 							<span class="pet-card__name">Katrine</span>
-							<button type="submit" class="button-secondary pet-card__button">
+							<button type="button" class="button-secondary pet-card__button">
 								Learn more
 							</button>
 						</div>
@@ -99,7 +99,7 @@
 							<img src="../../assets/images/pets-jennifer.png""
 							class="pet-card__image" alt="pet image">
 							<span class="pet-card__name">Jennifer</span>
-							<button type="submit" class="button-secondary pet-card__button">
+							<button type="button" class="button-secondary pet-card__button">
 								Learn more
 							</button>
 						</div>
@@ -110,7 +110,7 @@
 								alt="pet image"
 							/>
 							<span class="pet-card__name">Woody</span>
-							<button type="submit" class="button-secondary pet-card__button">
+							<button type="button" class="button-secondary pet-card__button">
 								Learn more
 							</button>
 						</div>
@@ -119,12 +119,12 @@
 						<img src="../../assets/icons/icon-arrow-right.svg" alt="slide to left" class="slider__button_arrow">
 					</button>
 				</div>
-				<button type="submit" class="button-primary our-friends__button">
+				<button onclick="location.href='../pets/'" type="button" class="button-primary our-friends__button">
 					Get to know the rest
 				</button>
 			</div>
 		</section>
-		<section class="help">
+		<section id="help" class="help">
 			<div class="help__content inner-wrapper">
 				<h3 class="help__heading">How you can help our shelter</h3>
 				<ul class="help__list">
@@ -246,28 +246,36 @@
 				</div>
 			</div>
 		</section>
-		<footer class="footer">
+		<footer id="footer" class="footer">
 			<div class="footer__content inner-wrapper">
                 <div class="footer-info-block footer-info-block_contacts">
                     <span class="footer-info-block__title">For questions and suggestions</span>
                     <div class="footer-info-item">
-                        <img src="../../assets/icons/icon-email.svg" alt="email icon" class="footer-info-item__icon">
-                        <span class="footer-info-item__label">email@shelter.com</span>    
+                        <a href="mailto:email@shelter.com">
+							<img src="../../assets/icons/icon-email.svg" alt="email icon" class="footer-info-item__icon">
+                        	<span class="footer-info-item__label">email@shelter.com</span>
+						</a>    
                     </div>
                     <div class="footer-info-item">
-                        <img src="../../assets/icons/icon-phone.svg" alt="phone icon" class="footer-info-item__icon">
-                        <span class="footer-info-item__label">+13 674 567 75 54</span>    
+                        <a href="tel:+136745677554">
+							<img src="../../assets/icons/icon-phone.svg" alt="phone icon" class="footer-info-item__icon">
+                        	<span class="footer-info-item__label">+13 674 567 75 54</span>   
+						</a>
                     </div>
                 </div>
                 <div class="footer-info-block footer-info-block_locations">
                     <span class="footer-info-block__title">We are waiting for your visit</span>
                     <div class="footer-info-item">
-                        <img src="../../assets/icons/icon-marker.svg" alt="marker icon" class="footer-info-item__icon">
-                        <span class="footer-info-item__label">1 Central Street, Boston (entrance from the store)</span>    
+                        <a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003" target="_blank" rel="noopener noreferrer">
+							<img src="../../assets/icons/icon-marker.svg" alt="marker icon" class="footer-info-item__icon">
+                        	<span class="footer-info-item__label">1 Central Street, Boston (entrance from the store)</span>
+						</a>    
                     </div>
                     <div class="footer-info-item">
-                        <img src="../../assets/icons/icon-marker.svg" alt="marker icon" class="footer-info-item__icon">
-                        <span class="footer-info-item__label">18 South Park, London</span>    
+                        <a href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003" target="_blank" rel="noopener noreferrer">
+							<img src="../../assets/icons/icon-marker.svg" alt="marker icon" class="footer-info-item__icon">
+                        	<span class="footer-info-item__label">18 South Park, London</span>   
+						</a> 
                     </div>
                 </div>
                 <img src="../../assets/images/footer-puppy.png" alt="pet image" class="footer__image">

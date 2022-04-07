@@ -235,6 +235,9 @@ h3
     cursor: pointer
     &:hover
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04)
+        .button-secondary
+            border-color: colors.$color-primary-light
+            background-color: colors.$color-primary-light
 
 .pet-card__image
     width: 270px
@@ -261,6 +264,7 @@ h3
     &:hover
         border-color: colors.$color-primary-light
         background-color: colors.$color-primary-light
+    
 
 .pet-card__button
     width: 188px
@@ -411,9 +415,10 @@ h4
     color: colors.$color-light-xl
     
 .footer-info-item
-    display: flex
-    gap: 20px
-    align-items: center
+    a
+        display: flex
+        gap: 20px
+        align-items: center
 
 .footer-info-item__label
     font-family: fonts.$font-stack-georgia
