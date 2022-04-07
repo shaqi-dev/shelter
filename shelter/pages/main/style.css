@@ -129,9 +129,9 @@ h2 {
 }
 
 .button-primary {
+  display: inline-block;
   padding: 15px 45px;
-  width: 208px;
-  height: 52px;
+  text-align: center;
   background: #F1CDB3;
   border-radius: 100px;
   border: none;
@@ -149,6 +149,10 @@ h2 {
 .start-screeen__image {
   position: absolute;
   right: 0px;
+}
+
+.start-screen__button {
+  width: 118px;
 }
 
 .about {
@@ -293,7 +297,7 @@ h3 {
 }
 
 .our-friends__button {
-  width: 260px;
+  width: 172px;
 }
 
 .help {
