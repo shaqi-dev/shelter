@@ -1,0 +1,51 @@
+.navigation
+    list-style: none
+    display: flex
+    gap: 36px
+
+.navigation__item
+    a
+        font-family: $font-stack-arial
+        font-size: 15px
+        line-height: 160%
+        color: $color-dark-s
+        cursor: pointer
+        &:hover
+            color: $color-light-s
+
+.navigation__item_dark
+    a
+        color: $color-dark-l
+        &:hover
+            color: $color-dark-3xl
+
+.navigation__item_active
+    a   
+        color: $color-light-s
+        line-height: 160%
+        &:hover
+            color: $color-light-s
+        &::after
+            content: ''
+            display: block
+            bottom: 3px
+            left: 0
+            height: 3px
+            width: 100%
+            background-color: $color-primary
+
+
+.navigation__item_dark-active
+    a
+        color: $color-dark-3xl
+        line-height: 160%
+        &:hover
+            color: $color-dark-3xl
+        &::after
+            content: ''
+            display: block
+            bottom: 3px
+            left: 0
+            height: 3px
+            width: 100%
+            background-color: $color-primary
