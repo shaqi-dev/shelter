@@ -1,12 +1,12 @@
 @import '../base/normalize'
 @import '../base/base'  
-@import '../variables/colors'
-@import '../variables/fonts'
-@import '../layout/wrapper'
-@import '../layout/navigation'
-@import '../layout/logo'
-@import '../layout/buttons'
-@import '../layout/headers'
+@import '../abstract/variables'
+@import '../abstract/fonts'
+@import '../layouts/wrapper'
+@import '../layouts/navigation'
+@import '../layouts/logo'
+@import '../layouts/buttons'
+@import '../layouts/headers'
 @import '../components/header'
 @import '../components/pet-card'
 @import '../components/paginator'  
@@ -17,7 +17,7 @@
 .header
     position: sticky
     background-color: $color-light-xl
-    height: 12rem
+    height: 120px
     margin: 0 auto
     top: 0
     z-index: 10
@@ -30,19 +30,19 @@
 // Our Friends
 
 .our-friends
-    padding: 8rem 0 10rem 0
+    padding: 80px 0 100px 0
     background-color: $color-light-l   
     .wrapper
         display: flex
         flex-direction: column
         align-items: center
     h3
-        max-width: 40rem
+        max-width: 400px
         text-align: center
-        max-height: 9rem
-        margin-bottom: 6rem
+        max-height: 90px
+        margin-bottom: 60px
         
 .our-friends__cards
     display: flex
-    gap: 3rem 4rem
+    gap: 30px 40px
     flex-wrap: wrap    

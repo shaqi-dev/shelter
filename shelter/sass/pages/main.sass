@@ -1,13 +1,13 @@
 @import '../base/normalize'
 @import '../base/base'  
-@import '../variables/colors'
-@import '../variables/fonts'
-@import '../layout/wrapper'
-@import '../layout/navigation'
-@import '../layout/logo'
-@import '../layout/buttons'
-@import '../layout/headers'
-@import '../layout/credit-card'
+@import '../abstract/variables'
+@import '../abstract/fonts'
+@import '../layouts/wrapper'
+@import '../layouts/navigation'
+@import '../layouts/logo'
+@import '../layouts/buttons'
+@import '../layouts/headers'
+@import '../layouts/credit-card'
 @import '../components/header'
 @import '../components/slider'
 @import '../components/pet-card'
@@ -17,7 +17,7 @@
 
 .header_main
     .wrapper 
-        margin-top: 6rem  
+        margin-top: 60px  
     
 // Start Screen
 
@@ -26,57 +26,57 @@
     background-repeat: no-repeat
     background-size: 100% 100%
     width: 100%
-    margin-top: -12rem
-    height: 90.8rem
+    margin-top: -120px
+    height: 908px
     display: flex
     align-items: center
     .wrapper
         width: 100%
-        height: 72.8rem
-        margin-top: 18rem 
+        height: 728px
+        margin-top: 180px
     img
-        width: 69.8rem
-        height: 72.8rem
+        width: 698px
+        height: 728px
         position: absolute
         right: 0 
 
 .start-screen__content
     position: absolute
-    top: 16.3rem
-    width: 46rem
-    height: 32.2rem
+    top: 163px
+    width: 460px
+    height: 322px
     display: flex
     flex-direction: column
     justify-content: space-between
     h2
-        max-width: 31rem
+        max-width: 310px
     p
         font-family: $font-stack-arial
         font-size: 1.5rem
         line-height: 160%
         color: $color-dark-s
     .button
-        width: 11.8rem
+        width: 118px
 
 // About
 
 .about 
     background-color: $color-light-xl 
-    padding: 8rem 0 10rem 0 
+    padding: 80px 0 100px 0 
     .wrapper
         display: flex
         justify-content: center
-        gap: 12rem
+        gap: 120px
     img
-        width: 30rem
-        height: 40.8rem
+        width: 300px
+        height: 408px
     
 .about__content
     display: flex
     flex-direction: column
     justify-content: center
-    gap: 2.5rem
-    max-width: 43rem
+    gap: 25px
+    max-width: 430px
     p 
         font-family: $font-stack-arial
         font-size: 1.5rem
@@ -86,53 +86,53 @@
 // Our Friends
 
 .our-friends
-    padding: 8rem 0 10rem 0
+    padding: 80px 0 100px 0
     background-color: $color-light-l
     .wrapper
         display: flex
         flex-direction: column
-        gap: 6rem
+        gap: 60px
         align-items: center
     h3
-        max-width: 40rem
+        max-width: 400px
         text-align: center
-        max-height: 9rem
+        max-height: 90px
     .slider
-        height: 43.5rem
+        height: 435px
         width: 100%
 
 .button_our-friends
-    width: 17.2rem
+    width: 172px
 
 // Help
 
 .help
-    padding: 8rem 0 10rem 0
+    padding: 80px 0 100px 0
     .wrapper
-        height: 43.1rem
+        height: 431px
     h3
-        max-width: 32rem
+        max-width: 320px
         text-align: center
         margin: 0 auto
         line-height: 128%
 
 .help__list
-    max-width: 102.6rem
-    margin: 6rem auto 0 auto
+    max-width: 1026px
+    margin: 60px auto 0 auto
     padding: 0
     display: flex
     flex-direction: column
-    gap: 5.5rem
+    gap: 55px
     
 .help__list_row-1
     display: grid
     justify-content: space-between
-    grid-template-columns: 8.3rem 15.2rem 6rem 15.4rem 10.2rem
+    grid-template-columns: 83px 152px 60px 154px 102px
 
 .help__list_row-2
     display: grid
     justify-content: space-evenly
-    grid-template-columns: 14.5rem 16.5rem 23rem 20rem
+    grid-template-columns: 145px 165px 230px 200px
 
 .help-item
     display: block
@@ -141,34 +141,34 @@
     list-style: none
 
 .help-item__icon
-    margin-bottom: 2.5rem
-    width: 6rem
-    height: 6rem
+    margin-bottom: 25px
+    width: 60px
+    height: 60px
 
 // Donation
 
 .donation
-    padding: 8rem 0 10rem 0
+    padding: 80px 0 100px 0
     background: $color-light-l
     .wrapper
         margin: 0 auto
         display: flex
         justify-content: center
-        height: 28.2rem
-        gap: 3rem
+        height: 282px
+        gap: 30px
 
 .donation__image
-    margin-top: 1rem
-    width: 50.5rem
-    height: 26.1rem
+    margin-top: 10px
+    width: 505px
+    height: 261px
 
 .donation__content
-    max-width: 38rem
+    max-width: 380px
     display: flex
     flex-direction: column
-    gap: 2rem
+    gap: 20px
     h3
-        max-width: 32rem
+        max-width: 320px
         line-height: 128%
     p
         font-family: $font-stack-arial
