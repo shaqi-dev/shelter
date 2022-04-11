@@ -1,0 +1,12 @@
+@mixin media-desktop 
+    @media (min-width: $width-desktop)
+        @content
+
+@mixin media-tablet 
+    @media (min-width: $width-tablet) and (max-width: $width-desktop - 1px)
+        @content
+
+@mixin media-mobile 
+    @media (min-width: $width-mobile) and (max-width: $width-tablet - 1px)
+        @content
+      

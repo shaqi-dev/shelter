@@ -1,12 +1,22 @@
 .footer
-    height: 350px
     background-image: url('../../assets/images/footer-gradient-background.jpg')
     background-repeat: no-repeat
     background-size: 100% 100%
     .wrapper
         padding-top: 40px
         display: flex
-        justify-content: space-between    
+        justify-content: space-between
+        @include media-tablet
+            padding-top: 15px
+            flex-direction: column
+            align-items: center
+            gap: 65px
+
+.footer__content
+    display: flex 
+    gap: 160px 
+    @include media-tablet
+        gap: 7.81vw
 
 .info-block
     height: 234px
@@ -22,7 +32,7 @@
 .info-block__title
     font-family: $font-stack-georgia
     font-size: 3.5rem
-    line-height: 130%
+    line-height: 4.5rem
     letter-spacing: 0.2rem
     color: $color-light-xl
     
@@ -37,7 +47,7 @@
 .info-block__label
     font-family: $font-stack-georgia
     font-size: 2rem
-    line-height: 115%
+    line-height: 2.3rem
     letter-spacing: 0.11rem
     color: $color-primary
 

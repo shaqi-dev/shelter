@@ -2,6 +2,7 @@
 @import '../base/base'  
 @import '../abstract/variables'
 @import '../abstract/fonts'
+@import '../abstract/mixins'
 @import '../layouts/wrapper'
 @import '../layouts/navigation'
 @import '../layouts/logo'
@@ -16,38 +17,62 @@
 // Header
 
 .header_main
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    width: 100%
     .wrapper 
-        margin-top: 60px  
+        padding-top: 60px  
+        @include media-tablet
+            padding-top: 30px  
     
 // Start Screen
 
-.start-screen 
+.start-screen
     background-image: url('../../assets/images/start-screen-gradient-background.jpg')
     background-repeat: no-repeat
     background-size: 100% 100%
-    width: 100%
-    margin-top: -120px
-    height: 908px
-    display: flex
-    align-items: center
+    padding-top: 40px
+    display: block
     .wrapper
+        display: flex
+        align-items: center
+        gap: 40px
+        padding-top: 140px
         width: 100%
-        height: 728px
-        margin-top: 180px
+        @include media-tablet
+            flex-direction: column
+            padding-top: 110px
+            gap: 100px
     img
         width: 698px
         height: 728px
-        position: absolute
-        right: 0 
+        align-self: flex-end
+        @include media-tablet
+            width: 74.09vw 
+            max-width: 698px
+            height: 77.21vw
+            max-height: 728px
+            padding-right: 3.91vw
 
 .start-screen__content
-    position: absolute
-    top: 163px
-    width: 460px
-    height: 322px
+    margin-top: -80px
     display: flex
     flex-direction: column
-    justify-content: space-between
+    gap: 42px
+    @include media-tablet
+        margin-top: 0px
+    .button
+        width: 118px
+        @include media-tablet
+            margin: 0 auto
+
+.start-screen__text-content
+    display: flex
+    flex-direction: column
+    gap: 42px
+    @include media-tablet
+        padding-left: 20.05vw
     h2
         max-width: 310px
     p
@@ -55,8 +80,8 @@
         font-size: 1.5rem
         line-height: 160%
         color: $color-dark-s
-    .button
-        width: 118px
+        @include media-tablet
+            padding-right: 20.05vw
 
 // About
 
@@ -67,6 +92,10 @@
         display: flex
         justify-content: center
         gap: 120px
+        @include media-tablet
+            flex-direction: column-reverse
+            gap: 80px
+            align-items: center
     img
         width: 300px
         height: 408px
@@ -77,11 +106,20 @@
     justify-content: center
     gap: 25px
     max-width: 430px
+    @include media-tablet
+       max-width: 100%
+       padding: 0 22.01vw
+    h3
+        @include media-tablet
+            max-width: 430px
     p 
         font-family: $font-stack-arial
         font-size: 1.5rem
         line-height: 160%
-        color: $color-dark-xl    
+        color: $color-dark-xl
+        @include media-tablet
+            max-width: 100%
+            
 
 // Our Friends
 
@@ -100,6 +138,8 @@
     .slider
         height: 435px
         width: 100%
+        @include media-tablet
+            padding: 0 3.91vw        
 
 .button_our-friends
     width: 172px
@@ -109,7 +149,6 @@
 .help
     padding: 80px 0 100px 0
     .wrapper
-        height: 431px
     h3
         max-width: 320px
         text-align: center
@@ -117,33 +156,32 @@
         line-height: 128%
 
 .help__list
-    max-width: 1026px
     margin: 60px auto 0 auto
     padding: 0
     display: flex
-    flex-direction: column
-    gap: 55px
-    
-.help__list_row-1
-    display: grid
-    justify-content: space-between
-    grid-template-columns: 83px 152px 60px 154px 102px
-
-.help__list_row-2
-    display: grid
-    justify-content: space-evenly
-    grid-template-columns: 145px 165px 230px 200px
+    justify-content: center
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 55px 122px
+    @include media-tablet 
+        gap: 55px 7.81vw
 
 .help-item
     display: block
-    z-index: -10
     text-align: center
     list-style: none
+    @include media-tablet 
+        flex-basis: 20%
 
 .help-item__icon
-    margin-bottom: 25px
-    width: 60px
+    width: 100%
     height: 60px
+    margin: 0 auto 28px auto   
+
+.help-item__label
+    margin: auto
+    @include media-tablet
+        width: 170px
 
 // Donation
 
@@ -154,25 +192,37 @@
         margin: 0 auto
         display: flex
         justify-content: center
-        height: 282px
         gap: 30px
+        @include media-tablet
+            flex-direction: column-reverse
+            align-items: center
+            gap: 50px
 
 .donation__image
     margin-top: 10px
     width: 505px
-    height: 261px
+    height: 260px
 
 .donation__content
     max-width: 380px
     display: flex
     flex-direction: column
     gap: 20px
+    @include media-tablet  
+        max-width: 100%
+        padding-left: 25.26vw
     h3
         max-width: 320px
-        line-height: 128%
+        line-height: 4.5rem
+    h5
+        @include media-tablet
+            max-width: 380px
     p
         font-family: $font-stack-arial
         font-style: italic
         font-size: 1.2rem
-        line-height: 1.8rem
+        line-height: 150%
         color: $color-dark-m
+        @include media-tablet
+            padding-right: 25.26vw
+

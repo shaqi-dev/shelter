@@ -2,6 +2,7 @@
 @import '../base/base'  
 @import '../abstract/variables'
 @import '../abstract/fonts'
+@import '../abstract/mixins'
 @import '../layouts/wrapper'
 @import '../layouts/navigation'
 @import '../layouts/logo'
@@ -12,7 +13,7 @@
 @import '../components/paginator'  
 @import '../components/footer'  
 
-// Header
+// Header 
 
 .header
     position: sticky
@@ -31,7 +32,9 @@
 
 .our-friends
     padding: 80px 0 100px 0
-    background-color: $color-light-l   
+    background-color: $color-light-l
+    @include media-tablet
+        padding: 80px 0 76px 0
     .wrapper
         display: flex
         flex-direction: column
@@ -41,8 +44,18 @@
         text-align: center
         max-height: 90px
         margin-bottom: 60px
+        @include media-tablet
+            margin-bottom: 30px
         
 .our-friends__cards
     display: flex
     gap: 30px 40px
-    flex-wrap: wrap    
+    flex-wrap: wrap
+    justify-content: center
+    @include media-tablet
+        padding: 0 12.24vw
+        column-gap: 5.21vw
+        .pet-card:nth-last-child(-n+2)
+            display: none  
+    .pet-card
+        @include media-tablet

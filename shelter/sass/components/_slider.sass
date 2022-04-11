@@ -1,6 +1,9 @@
 .slider
     display: flex
-    justify-content: space-between
+    justify-content: center
+    gap: 53px
+    @include media-tablet
+        gap: 1.56vw
 
 .slider__button
     position: relative
@@ -17,8 +20,13 @@
         left: 17px
     &:hover
         border-color: $color-primary-light
-        background-color: $color-primary-light 
+        background-color: $color-primary-light
         
 .slider__items
     display: flex
     gap: 90px
+    @include media-tablet
+        gap: 5.21vw
+        .pet-card:nth-last-child(-n+1)
+            display: none
+        
