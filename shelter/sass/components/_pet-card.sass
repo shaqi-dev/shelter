@@ -8,6 +8,9 @@
     align-items: center
     gap: 30px
     cursor: pointer
+    @include transition
+    @include media-mobile
+        flex-basis: 100%
     &:hover
         box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04)
         background-color: $color-light-xl

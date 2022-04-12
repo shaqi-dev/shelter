@@ -4,6 +4,11 @@ h2
     font-size: 4.4rem
     line-height: 5.7rem
     color: $color-light-xl
+    @include media-mobile
+        font-size: 2.5rem
+        line-height: 3.2rem
+        text-align: center
+        letter-spacing: 0.15rem
     
 h3 
     font-family: $font-stack-georgia
@@ -12,6 +17,11 @@ h3
     line-height: 4.5rem
     letter-spacing: 0.21rem
     color: $color-dark-l
+    @include media-mobile
+        font-size: 2.5rem
+        line-height: 3.2rem
+        text-align: center
+        letter-spacing: 0.15rem
 
 h4
     font-family: $font-stack-georgia
@@ -20,6 +30,10 @@ h4
     line-height: 2.3rem
     letter-spacing: 0.1rem
     color: $color-dark-l
+    @include media-mobile
+        font-size: 1.5rem
+        line-height: 1.7rem
+        letter-spacing: 0.09rem
 
 h5
     font-family: $font-stack-georgia
@@ -28,3 +42,8 @@ h5
     line-height: 1.7rem
     letter-spacing: 0.09rem
     color: $color-dark-l
+    @include media-mobile
+        font-size: 1.3rem
+        text-align: center
+        line-height: 2.5rem
+    

@@ -5,6 +5,7 @@
 @import '../abstract/mixins'
 @import '../layouts/wrapper'
 @import '../layouts/navigation'
+@import '../layouts/hamburger'
 @import '../layouts/logo'
 @import '../layouts/buttons'
 @import '../layouts/headers'
@@ -35,6 +36,8 @@
     background-color: $color-light-l
     @include media-tablet
         padding: 80px 0 76px 0
+    @include media-mobile
+        padding: 42px 0
     .wrapper
         display: flex
         flex-direction: column
@@ -46,6 +49,10 @@
         margin-bottom: 60px
         @include media-tablet
             margin-bottom: 30px
+        @include media-mobile
+            max-width: 100%
+            padding: 0 3.13vw
+            margin-bottom: 42px
         
 .our-friends__cards
     display: flex
@@ -56,6 +63,9 @@
         padding: 0 12.24vw
         column-gap: 5.21vw
         .pet-card:nth-last-child(-n+2)
-            display: none  
+            display: none 
+    @include media-mobile
+        .pet-card:nth-last-child(-n+5)
+                display: none 
     .pet-card
         @include media-tablet

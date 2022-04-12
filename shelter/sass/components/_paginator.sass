@@ -3,12 +3,16 @@
     margin-left: -40px
     @include media-tablet
         padding-top: 40px
+    @include media-mobile
+        padding-top: 42px
 
 .paginator__list
     list-style: none
     display: flex
     gap: 20px
     margin: 0
+    @include media-mobile
+        gap: 10px
 
 .paginator__item
     padding: 0
@@ -21,6 +25,7 @@
     background: none
     border: 2px solid $color-primary
     border-radius: 50%
+    @include transition
     .button-paginator__inner-text
         font-family: $font-stack-georgia
         font-size: 2rem

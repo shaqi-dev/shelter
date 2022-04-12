@@ -7,6 +7,9 @@
         @content
 
 @mixin media-mobile 
-    @media (min-width: $width-mobile) and (max-width: $width-tablet - 1px)
+    @media (max-width: $width-tablet - 1px)
         @content
+
+@mixin transition
+    transition: 100ms all ease-in-out
       

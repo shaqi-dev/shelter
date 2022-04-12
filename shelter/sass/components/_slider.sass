@@ -5,6 +5,16 @@
     @include media-tablet
         gap: 1.56vw
 
+.slider__mobile-buttons-wrapper
+    display: none
+    @include media-mobile
+        display: flex
+        justify-content: space-between
+        width: 57.5vw
+        max-width: 220px
+        margin-top: -23px 
+
+
 .slider__button
     position: relative
     margin: auto 0
@@ -14,7 +24,15 @@
     background: none
     border: 2px solid $color-primary
     border-radius: 50%
-    .slider__button_arrow
+    @include transition
+    @include media-mobile
+        position: relative
+        display: none
+    &_mobile
+        display: none
+        @include media-mobile
+            display: block
+    &_arrow
         position: absolute
         top: 21px
         left: 17px
@@ -28,5 +46,9 @@
     @include media-tablet
         gap: 5.21vw
         .pet-card:nth-last-child(-n+1)
+            display: none
+    @include media-mobile
+        gap: 5.21vw
+        .pet-card:nth-last-child(-n+2)
             display: none
         

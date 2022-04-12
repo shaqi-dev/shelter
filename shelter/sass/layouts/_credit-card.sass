@@ -5,9 +5,12 @@
     background: $color-primary
     border-radius: 9px
     cursor: pointer
+    @include transition
     @include media-tablet
         max-width: 380px
-        
+    @include media-mobile
+        width: 251px   
+        margin: 0 auto
     a 
         height: 100%
         margin: auto 0
@@ -16,6 +19,9 @@
         gap: 15px
     h4
         letter-spacing: 0.12rem
+        @include media-mobile
+            letter-spacing: 0.09rem
+        
     &:hover
         background: $color-primary-light
     p
