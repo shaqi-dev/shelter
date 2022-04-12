@@ -739,13 +739,6 @@ h5 {
   transition: 100ms all ease-in-out;
 }
 
-@media (max-width: 767px) {
-  .pet-card {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-}
-
 .pet-card:hover {
   -webkit-box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
           box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
