@@ -989,6 +989,8 @@ h5 {
   height: 100%;
   z-index: 100;
   overflow: hidden;
+  -webkit-transition: all .18s ease-in-out;
+  transition: all .18s ease-in-out;
 }
 
 .pet-modal .pet-modal__overlay {
@@ -1015,6 +1017,11 @@ h5 {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.pet-modal .wrapper_modal {
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .pet-modal img {
