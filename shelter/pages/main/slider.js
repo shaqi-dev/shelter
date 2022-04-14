@@ -1,5 +1,10 @@
-export default function slider(sliderWrapper, sliderField, sliderButtonsLeft, sliderButtonsRight, cards, vw) {
-    const slideSize = parseInt(window.getComputedStyle(sliderWrapper, null).width) + parseInt(window.getComputedStyle(sliderField, null).columnGap),
+export default function slider(wrapperSelector, fieldSelector, buttonsLeftSelector, buttonsRightSelector, cards, handleClickOnPetCard) {
+    const sliderWrapper = document.querySelector(wrapperSelector),
+          sliderField = document.querySelector(fieldSelector),
+          sliderButtonsLeft = document.querySelectorAll(buttonsLeftSelector),
+          sliderButtonsRight = document.querySelectorAll(buttonsRightSelector),
+          vw = Math.max(document.documentElement.clientWidth || 0),
+          slideSize = parseInt(window.getComputedStyle(sliderWrapper, null).width) + parseInt(window.getComputedStyle(sliderField, null).columnGap),
           posInitial = -slideSize;
 
     let previousSlides = [],
@@ -37,6 +42,8 @@ export default function slider(sliderWrapper, sliderField, sliderButtonsLeft, sl
                 i++;
             }
         }
+
+        // pushArray.forEach(card => card.addEventListener('click', (e) => handleClickOnPetCard((e.target.parentNode.dataset.name || e.target.dataset.name))));
 
         if (direction === 1) {
             sliderField.append(...pushArray);

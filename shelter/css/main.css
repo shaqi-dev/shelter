@@ -177,7 +177,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.hidden {
+.hide {
   display: none;
 }
 
@@ -715,6 +715,10 @@ h5 {
   }
 }
 
+.content-wrapper {
+  max-height: 500px;
+}
+
 .slider__items {
   position: absolute;
   display: -webkit-box;
@@ -975,6 +979,133 @@ h5 {
     max-height: 310px;
     height: 84.06vw;
   }
+}
+
+.pet-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pet-modal .wrapper {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.pet-modal img {
+  height: 100%;
+}
+
+.content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #FAFAFA;
+}
+
+.pet-modal__image {
+  width: 500px;
+  height: 500px;
+}
+
+.pet-modal__content {
+  width: 351px;
+  padding: 50px 18px 88px 30px;
+}
+
+.pet-modal__name {
+  letter-spacing: 0.2rem;
+  color: #000000;
+}
+
+.pet-modal__type {
+  padding-top: 10px;
+  letter-spacing: 0.12rem;
+  color: #000000;
+}
+
+.pet-modal__description {
+  padding-top: 40px;
+  letter-spacing: 0.09rem;
+  color: #000000;
+}
+
+.pet-modal__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 11px;
+}
+
+.pet-modal__list-item {
+  position: relative;
+  padding-left: 14px;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.08rem;
+  color: #000000;
+}
+
+.pet-modal__list-item strong {
+  letter-spacing: 0.22rem;
+}
+
+.pet-modal__list-item::before {
+  position: absolute;
+  left: 0px;
+  content: "\2022";
+  font-size: 1.5rem;
+  color: #F1CDB3;
+  display: inline-block;
+  width: 1.45rem;
+}
+
+.pet-modal__close-button {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  z-index: 150;
+  top: -54px;
+  left: 889px;
+  background: none;
+  border: 2px solid #F1CDB3;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 100ms all ease-in-out;
+  transition: 100ms all ease-in-out;
+}
+
+.pet-modal__close-button img {
+  position: absolute;
+  left: 38.46%;
+  top: 38.46%;
+  width: 12px;
+  height: 12px;
+}
+
+.pet-modal__close-button:hover {
+  border-color: #FDDCC4;
+  background-color: #FDDCC4;
 }
 
 .header_main {

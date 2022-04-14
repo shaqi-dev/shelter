@@ -2,7 +2,12 @@
 
 import PetsService from "../../pets-service.js";
 import slider from "./slider.js";
+import modal from "./modal.js";
 
+const petsService = new PetsService(),
+      pets = await petsService.getAllPets(),
+      petCards = pets.map(pet => petsService.createPetCard(pet));
+   
 // Disable last 2 navigation buttons
 
 const navigationItems = document.querySelectorAll('.navigation__item')
@@ -17,18 +22,17 @@ for (let i = 0; i < navigationItems.length; i++) {
     }
 }
 
-// Slider
+slider('.slider__wrapper', '.slider__items', '.slider__button_left', '.slider__button_right', petCards);
+modal('.pet-modal', '.wrapper', '.pet-modal__close-button', '.slider__items', pets);
 
-const petsService = new PetsService(),
-      pets = await petsService.getAllPets(),
-      petCards = pets.map(pet => petsService.createPetCard(pet)),
-      sliderWrapper = document.querySelector('.slider__wrapper'),
-      sliderField = document.querySelector('.slider__items'),
-      sliderButtonsLeft = document.querySelectorAll('.slider__button_left'),
-      sliderButtonsRight = document.querySelectorAll('.slider__button_right'),
-      vw = Math.max(document.documentElement.clientWidth || 0);
 
-slider(sliderWrapper, sliderField, sliderButtonsLeft, sliderButtonsRight, petCards, vw);
+
+    
+
+
+
+
+
 
 
 
