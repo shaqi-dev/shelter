@@ -562,6 +562,7 @@ h5 {
 
 .pet-card {
   height: 435px;
+  min-width: 270px;
   overflow: hidden;
   background-color: #FAFAFA;
   border-radius: 9px;
