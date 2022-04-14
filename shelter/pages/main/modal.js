@@ -1,5 +1,6 @@
-export default function modal(modalSelector, modalWrapperSelector, closeButtonSelector, triggersWrapperSelector, cardsData) {
+export default function modal(modalSelector, modalOverlaySelector, modalWrapperSelector, closeButtonSelector, triggersWrapperSelector, cardsData) {
     const modal = document.querySelector(modalSelector),
+          modalOverlay = document.querySelector(modalOverlaySelector),
           modalWrapper = modal.querySelector(modalWrapperSelector),
           triggersWrapper = document.querySelector(triggersWrapperSelector),
           closeButton = document.querySelector(closeButtonSelector);
@@ -55,7 +56,7 @@ export default function modal(modalSelector, modalWrapperSelector, closeButtonSe
     };
 
     modal.addEventListener("click", (e) => {
-        if (e.target && e.target === modal) {
+        if (e.target && e.target === modalOverlay) {
             hideModal();
         }
     });

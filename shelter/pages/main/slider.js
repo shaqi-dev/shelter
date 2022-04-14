@@ -43,8 +43,6 @@ export default function slider(wrapperSelector, fieldSelector, buttonsLeftSelect
             }
         }
 
-        // pushArray.forEach(card => card.addEventListener('click', (e) => handleClickOnPetCard((e.target.parentNode.dataset.name || e.target.dataset.name))));
-
         if (direction === 1) {
             sliderField.append(...pushArray);
         } else if (direction === -1) {
