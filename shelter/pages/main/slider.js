@@ -1,39 +1,48 @@
-export default function slider(wrapperSelector, fieldSelector, buttonsLeftSelector, buttonsRightSelector, cards, handleClickOnPetCard) {
+export default function slider(wrapperSelector, fieldSelector, buttonsLeftSelector, buttonsRightSelector, cards) {
     const sliderWrapper = document.querySelector(wrapperSelector),
           sliderField = document.querySelector(fieldSelector),
           sliderButtonsLeft = document.querySelectorAll(buttonsLeftSelector),
           sliderButtonsRight = document.querySelectorAll(buttonsRightSelector),
-          vw = Math.max(document.documentElement.clientWidth || 0),
-          slideSize = parseInt(window.getComputedStyle(sliderWrapper, null).width) + parseInt(window.getComputedStyle(sliderField, null).columnGap),
-          posInitial = -slideSize;
+          cardWidth = 270;
 
     let previousSlides = [],
         currentSlides = [],
         nextSlides = [],
-        cardsPerSlide,
+        slideSize = parseInt(cardWidth * 3 + parseInt(window.getComputedStyle(sliderField, null).columnGap) * 3),
+        posInitial = -slideSize,
+        cardsPerSlide = null,
         posCurrent = posInitial,
         allowShift = true;  
 
     // Setting max cards per slide
 
-    function setCardsPerSlide(vw) {
-        if (vw >= 1280) {
+    function setCardsPerSlide() {
+        if (window.matchMedia("(min-width: 1280px)").matches && cardsPerSlide !== 3) {
             cardsPerSlide = 3;
-        } else if (vw >= 768 && vw < 1280) {
-            cardsPerSlide = 2;
-        } else if (vw < 768) {
-            cardsPerSlide = 1;
+            slideSize = parseInt(cardWidth * 3 + parseInt(window.getComputedStyle(sliderField, null).columnGap) * 3);
+            posInitial = -slideSize;
+            sliderField.style.transform = `translateX(${posInitial}px)`;
+        } else if (window.matchMedia("(min-width: 768px) and (max-width: 1279px)").matches && cardsPerSlide !== 2) {
+            cardsPerSlide = 2;  
+            slideSize = parseInt(cardWidth * 3 + parseInt(window.getComputedStyle(sliderField, null).columnGap) * 3);
+            posInitial = -slideSize;
+            sliderField.style.transform = `translateX(${posInitial}px)`;
+        } else if (window.matchMedia("(max-width: 767px)").matches && cardsPerSlide !== 1) {
+            cardsPerSlide = 1;        
+            slideSize = parseInt(cardWidth * 3 + parseInt(window.getComputedStyle(sliderField, null).columnGap) * 3);
+            posInitial = -slideSize;
+            sliderField.style.transform = `translateX(${posInitial}px)`;
         }
     }
 
-    setCardsPerSlide(vw);
+    setCardsPerSlide();
 
     window.addEventListener("resize", () => setCardsPerSlide(Math.max(document.documentElement.clientWidth))); 
 
     // Unique cards initilization
 
-    function getUniqueCards(checkArray, pushArray, cardsCount, direction) {
-        for (let i = 0; i < cardsCount;) {
+    function getUniqueCards(checkArray, pushArray, maxCardsCount, direction) {
+        for (let i = 0; i < maxCardsCount;) {
             const randomCard = cards[Math.floor(Math.random() * 8)];
     
             if (!checkArray.some(e => e.dataset.name === randomCard.dataset.name) && 
@@ -50,13 +59,22 @@ export default function slider(wrapperSelector, fieldSelector, buttonsLeftSelect
         }
     }
 
-    getUniqueCards(currentSlides, currentSlides, cardsPerSlide, 1);
-    getUniqueCards(currentSlides, previousSlides, cardsPerSlide, -1);
-    getUniqueCards(currentSlides, nextSlides, cardsPerSlide, 1);
+    function initSlider() {
+        getUniqueCards(currentSlides, currentSlides, 3, 1);
+        getUniqueCards(currentSlides, previousSlides, 3, -1);
+        getUniqueCards(currentSlides, nextSlides, 3, 1);
+    }
 
-    // Set initial position
+    initSlider();
 
-    sliderField.style.transform = `translateX(${posInitial}px)`;
+    function clearSlider() {
+        sliderField.childNodes.forEach(card => sliderField.removeChild(card));
+    }
+
+    function refreshSlider() {
+        clearSlider();
+        initSlider();
+    }
     
     // Add event listeners
 
@@ -107,10 +125,10 @@ export default function slider(wrapperSelector, fieldSelector, buttonsLeftSelect
             allowShift = false;
             sliderField.classList.add('slider__items_shifting');   
             if (direction === 1) {
-                posCurrent = posInitial - slideSize;
+                posCurrent = posInitial - parseInt(cardWidth * cardsPerSlide + parseInt(window.getComputedStyle(sliderField, null).columnGap) * cardsPerSlide);
                 sliderField.style.transform = `translateX(${posCurrent}px)`;
             } else if (direction === -1) {
-                posCurrent = posInitial + slideSize;
+                posCurrent = posInitial + parseInt(cardWidth * cardsPerSlide + parseInt(window.getComputedStyle(sliderField, null).columnGap) * cardsPerSlide);
                 sliderField.style.transform = `translateX(${posCurrent}px)`;     
             }
 
