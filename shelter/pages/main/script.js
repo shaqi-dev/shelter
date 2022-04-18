@@ -1,5 +1,7 @@
 "use strict"
 
+import disableClickEvent from "../../scripts/disableClickEvent.js";
+import handleOpenHamburger from "../../scripts/handleOpenHamburger.js";
 import PetsService from "../../pets-service.js";
 import slider from "../../scripts/slider.js";
 import modal from "../../scripts/modal.js";
@@ -7,13 +9,11 @@ import modal from "../../scripts/modal.js";
 const navigationItems = document.querySelectorAll('.navigation__item');
 const creditCard = document.querySelector('.credit-card');
 
-function disableClickEvent(element) {
-    element.addEventListener('click', e => e.preventDefault());
-}
-
-disableClickEvent(navigationItems[2]);
-disableClickEvent(navigationItems[3]);
+// disableClickEvent(navigationItems[2]);
+// disableClickEvent(navigationItems[3]);
 disableClickEvent(creditCard);
+
+handleOpenHamburger('.header .wrapper .logo', '.hamburger', '.hamburger__button');
 
 const petsService = new PetsService(),
       pets = await petsService.getAllPets(),

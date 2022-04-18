@@ -1,20 +1,16 @@
 "use strict"
 
+import disableClickEvent from "../../scripts/disableClickEvent.js";
+import handleOpenHamburger from "../../scripts/handleOpenHamburger.js";
 import PetsService from "../../pets-service.js";
 import modal from "../../scripts/modal.js";
 
-// Disable last 2 navigation buttons
+const navigationItems = document.querySelectorAll('.navigation__item');
 
-const navigationItems = document.querySelectorAll('.navigation__item')
+// disableClickEvent(navigationItems[2]);
+// disableClickEvent(navigationItems[3]);
 
-function disableClickEvent(element) {
-    element.addEventListener('click', e => e.preventDefault());
-}
-
-disableClickEvent(navigationItems[2]);
-disableClickEvent(navigationItems[3]);
-
-// Render pets cards
+handleOpenHamburger('.header .wrapper .logo', '.hamburger','.hamburger__button');
 
 const petsService = new PetsService(),
       pets = await petsService.getAllPets(),
