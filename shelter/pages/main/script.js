@@ -1,8 +1,8 @@
 "use strict"
 
 import PetsService from "../../pets-service.js";
-import slider from "./slider.js";
-import modal from "./modal.js";
+import slider from "../../scripts/slider.js";
+import modal from "../../scripts/modal.js";
 
 const navigationItems = document.querySelectorAll('.navigation__item');
 const creditCard = document.querySelector('.credit-card');
