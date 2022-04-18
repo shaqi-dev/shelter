@@ -912,14 +912,12 @@ h5 {
   .info-block_locations {
     gap: 40px;
   }
-}
-
-.info-block_locations .info-block__item {
-  padding: 0 10px;
-}
-
-.info-block_locations .info-block__item:last-child {
-  padding: 0px 42px 0px 10px;
+  .info-block_locations .info-block__item {
+    padding: 0 10px;
+  }
+  .info-block_locations .info-block__item:last-child {
+    padding: 0px 42px 0px 10px;
+  }
 }
 
 .info-block__title {
