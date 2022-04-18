@@ -1,6 +1,7 @@
 "use strict"
 
 import PetsService from "../../pets-service.js";
+import modal from "../../scripts/modal.js";
 
 // Disable last 2 navigation buttons
 
@@ -24,4 +25,6 @@ const cardsWrapper = document.querySelector('.our-friends__cards');
 petCards.forEach(card => {
     cardsWrapper.append(card)
 });
+
+modal('.pet-modal', '.pet-modal__overlay', '.wrapper_modal', '.pet-modal__close-button', '.our-friends__cards', pets);
 

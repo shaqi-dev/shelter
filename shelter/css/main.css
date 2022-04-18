@@ -1034,6 +1034,7 @@ h5 {
   display: -ms-flexbox;
   display: flex;
   border-radius: 9px;
+  max-height: 500px;
   overflow: hidden;
   background: #FAFAFA;
 }
