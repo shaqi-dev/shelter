@@ -1,2 +1,3 @@
-# shaqi-dev-JSFE2022Q1
-Private repository for @shaqi-dev
+# Shelter landing page
+
+Deploy: https://shaqi-dev.github.io/shelter/shelter/pages/main/
